@@ -1,7 +1,11 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment } from '../features/showSlice';
 
 const SubcChild = () => {
+  
+  const dispatch = useDispatch();
+  
   //for showing data from redux store
   const data = useSelector((c)=>{
     return c.storeData.value;
@@ -12,6 +16,7 @@ const SubcChild = () => {
         <h2>
            Sub child: {data}
         </h2>
+        <button onClick={()=>dispatch(increment())}>Click</button>
     </div>
   )
 }
