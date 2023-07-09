@@ -1,13 +1,15 @@
 import React from 'react'
 import SubcChild from './SubcChild'
+import { useSelector } from 'react-redux';
 
 const Child1 = (props) => {
+  const data = useSelector((c)=> c.storeData.value);
   return (
     <div>
         <h1>
-            child one: {props.childOne}
+            child one: {data}
         </h1>
-        <SubcChild data={props.childOne}/>
+        <SubcChild />
     </div>
   )
 }
