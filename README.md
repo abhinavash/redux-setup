@@ -3,3 +3,5 @@
 
 ## How Redux Flow Work
 ![redux-complete](https://github.com/abhinavash/redux-setup/tree/useDipactch/REDUX.png?raw=true)
+
+![Redux Flow](./REDUX.png)
