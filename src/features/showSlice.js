@@ -12,9 +12,12 @@ export const showSlice = createSlice({
         //these are the action
         increment: (state) => {
             state.value = state.value+1;
+        },
+        incrementByTen: (state, action) => {
+            state.value = state.value + action.payload;
         }
     }
 });
 
-export const {showData,increment} = showSlice.actions;
+export const {showData,increment,incrementByTen} = showSlice.actions;
 export default showSlice.reducer;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { increment } from '../features/showSlice';
+import { increment, incrementByTen } from '../features/showSlice';
 
 const SubcChild = () => {
   
@@ -17,6 +17,8 @@ const SubcChild = () => {
            Sub child: {data}
         </h2>
         <button onClick={()=>dispatch(increment())}>Click</button>
+        <button onClick={()=>dispatch(incrementByTen(10))}>Click</button>
+
     </div>
   )
 }
